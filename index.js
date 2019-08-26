@@ -1,5 +1,8 @@
-Vue.component('widget-brain', {
+const WidgetBrain = {
     props: {
+        message: {
+            type: String
+        }
     },
     data: function() {
         return {
@@ -8,10 +11,13 @@ Vue.component('widget-brain', {
     created() {
     },
     template: `<div>
-            <p>Hello!</p>
+            <p>My message: {{ message }}</p>
         </div>`,
-});
+};
 
-new Vue({
-    el: '#app'
+const vm = new Vue({
+    el: '#app',
+    components: {
+        'widget-brain': WidgetBrain,
+    }
 })

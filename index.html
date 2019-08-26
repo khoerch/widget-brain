@@ -5,17 +5,62 @@
         <meta charset="utf-8">
         <meta name="description" content="Vue.js web application built as part of the Widget Brain application process">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.css">
         <link rel="stylesheet" type="text/css" href="main.css">
     </head>
     
     <body>
 
         <div id="app">
-            <widget-brain></widget-brain>
+            <header>
+                <h1>Predictive Maintenance</h1>
+                <div>
+                    <p>Kevin Hoercher</p>
+                    <button>^</button>
+                </div>
+            </header>
+
+            <main>
+                <section class="sidebar">
+                    <h2>Terminal Overview</h2>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTny8XmbcOqIwsz6qGihPkEX8-QhNzS1eIrd5u7nNyGP79RSG-2tg" alt="location image">
+                    <h3>Terminal name</h3>
+                    <p>WEST</p>
+                    <h3>Country Code</h3>
+                    <p>NLD</p>
+                    <h3>Address</h3>
+                    <p></p>
+                </section>
+
+                <section class="main-content">
+                    <nav>
+                        <ul>
+                            <li>Dashboard</li>
+                            <li>Asset Health</li>
+                            <li>Work Orders</li>
+                        </ul>
+                    </nav>
+
+                    <div>
+                        <h2>Asset overview</h2>
+                        <nav>
+                            <ul>
+                                <li>Events</li>
+                                <li>Position</li>
+                                <li>Travel Time</li>
+                                <li>Torque Profile</li>
+                                <li>Work Orders</li>
+                                <li>Alarm Analytics</li>
+                            </ul>
+                        </nav>
+                        <canvas id="myChart" width="400" height="400"></canvas>
+                    </div>
+                </section>
+            </main>
         </div>
         
-        <!-- Imports Vue.js. Linking to the development version for testing. Did not opt for the full CLI option in this case. -->
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
         <script src="index.js"></script>
 
     </body>
