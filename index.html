@@ -13,8 +13,8 @@
 
         <div id="app">
             <header>
-                <h1>Predictive Maintenance</h1>
-                <div>
+                <h1>| PREDICTIVE MAINTENANCE</h1>
+                <div class="profile">
                     <p>Kevin Hoercher</p>
                     <button>^</button>
                 </div>
@@ -22,45 +22,47 @@
 
             <main>
                 <section class="sidebar">
-                    <h2>Terminal Overview</h2>
+                    <h2 class="blue-header">Terminal Overview</h2>
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTny8XmbcOqIwsz6qGihPkEX8-QhNzS1eIrd5u7nNyGP79RSG-2tg" alt="location image">
-                    <h3>Terminal name</h3>
-                    <p>WEST</p>
-                    <h3>Country Code</h3>
-                    <p>NLD</p>
-                    <h3>Address</h3>
-                    <p></p>
+                    <div class="site-info">
+                        <h3>Terminal name</h3>
+                        <p>WEST</p>
+                        <h3>Country Code</h3>
+                        <p>NLD</p>
+                        <h3>Address</h3>
+                        <p></p>
+                    </div>
                 </section>
 
                 <section class="main-content">
                     <nav>
-                        <ul>
+                        <ul class="nav-inner">
                             <li>Dashboard</li>
-                            <li>Asset Health</li>
+                            <li class="active">Asset Health</li>
                             <li>Work Orders</li>
                         </ul>
                     </nav>
 
-                    <div>
-                        <h2>Asset overview</h2>
+                    <div class="chart-content">
+                        <h2 class="blue-header">Asset overview</h2>
                         <nav>
-                            <ul>
+                            <ul class="nav-inner">
                                 <li>Events</li>
                                 <li>Position</li>
                                 <li>Travel Time</li>
-                                <li>Torque Profile</li>
+                                <li class="active">Torque Profile</li>
                                 <li>Work Orders</li>
                                 <li>Alarm Analytics</li>
                             </ul>
                         </nav>
-                        <canvas id="myChart" width="400" height="400"></canvas>
+                        <torque-chart></torque-chart>
                     </div>
                 </section>
             </main>
         </div>
         
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.min.js"></script>
         <script src="index.js"></script>
 
     </body>
